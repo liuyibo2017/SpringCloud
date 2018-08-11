@@ -1,0 +1,33 @@
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/liuyibo138/SpringCloud_Sell.git
+          username: liuyibo138
+          password: liuyibo138138138
+          search-paths: config-repo
+          basedir: D:\ideaWorkSpace\configFiles\SpringCloud_Sell
+  rabbitmq:
+    addresses: 192.168.217.160
+    port: 5672
+    username: guest
+    password: guest
+#    addresses: http://192.168.217.160
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#暴露所有接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  security:
+    enabled: false
